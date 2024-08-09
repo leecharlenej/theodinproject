@@ -51,3 +51,4 @@ Here are my notes for the Foundations course.
 - `flex-shrink`: Only applys when total size of flex items exceed size of flex container and hence, need to shrink to fit.
 - `flex-basis`: Sets intial size of flex item. `auto` checks item for a width declaration.
 - `flex-direction`: Default = row.
+- Very useful website: [(here)](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)

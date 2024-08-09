@@ -8,6 +8,7 @@ Here are my notes for the Foundations course.
 1. [CSS Foundations - Inspecting HTML and CSS](#cssinspect)
 2. [CSS Foundations - The Box Model](#cssbox)
 3. [CSS Foundations - Block and Inline](#cssblockinline)
+4. [Flexbox](#flexbox)
 
 ---
 
@@ -37,3 +38,16 @@ Here are my notes for the Foundations course.
 - `inline`: Doesn't respect width and height, padding top and bottom exist but overlap with other boxes
 - `inline-block`: Width, height and padding are respected. Elements are side-by-side.
 - `block`: Everything is respected but elements are on new lines.
+
+<a id= "flexbox"></a>
+### Flexbox
+- Used to arrange items into rows or columns; flex based on the rules defined.
+- Might not respect width value, depending on parent container.
+- flex container: Element that has `display:flex`.
+- flex item: Anything that lives directly inside a flex container.
+- `flex`: Shorthand for `flex-grow`, `flex-shrink`, `flex-basis`.
+- `flex: 1` = `flex: 1 1 0`
+- `flex-grow`: How it grows relative to other flex items in the flex container.
+- `flex-shrink`: Only applys when total size of flex items exceed size of flex container and hence, need to shrink to fit.
+- `flex-basis`: Sets intial size of flex item. `auto` checks item for a width declaration.
+- `flex-direction`: Default = row.

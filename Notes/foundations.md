@@ -30,3 +30,5 @@ Here are my notes for the Foundations course.
 - To space 2 elements away from each other: Use margin.
 - To space out element from itself: Use padding.
 - `boxing-sizing: border-box;`: Default is `content-box`. Usually added to `* {}`.Height and width will include border and padding. The content box will be smaller.
+
+test

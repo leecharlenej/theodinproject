@@ -149,3 +149,22 @@ label: {
   // ...
 }
 ```
+- To run JavaScript in VS: `node <FILENAME>.js`
+- Use of `const temp` when trying to switch 2 variables or `if (min > max) [min, max] = [max, min];`.
+- Coding tip: Give names to expressions!
+```
+const leapYears = function (year) {
+  const isYearDivisibleByFour = year % 4 === 0;
+  const isCentury = year % 100 === 0;
+  const isYearDivisibleByFourHundred = year % 400 === 0;
+
+  if (
+    isYearDivisibleByFour &&
+    (!isCentury || isYearDivisibleByFourHundred)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+```

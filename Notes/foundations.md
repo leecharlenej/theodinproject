@@ -71,7 +71,7 @@ Here are my notes for the Foundations course.
 - `alert( alert(1) && alert(2) );`: Shows 1, then undefined.
 - Ternary operator: `condition ? run this code : run this code instead`
 
-### Function Basics
+#### Function Basics
 - Functions can modify global variables if you do not use `let` inside the function.
 
 ```
@@ -132,4 +132,20 @@ let func = function(arg1, arg2, ..., argN) {
 
 // ---------- Arrow function ----------
 let func = (arg1, arg2, ..., argN) => expression;
+```
+#### Clean code
+- Functions should start with verbs and variables with nouns/ adjectives.
+
+#### Arrays and loops
+- Arrays use numbered indexes (Element names to be numbers.) vs. objects use named indexes (Element names to be strings.).
+- `[]` is used for accessing both arrays and objects. Hence, cannot use negative bracket indexing. E.g. `[-1]`. Use `at()` method instead.
+- `delete()` leaves `undefined` holes in array. Use `pop()` or `shift()` instead.
+- do-while loops: When you want loop body to be executed at least once.
+- Labels: For breaking out of multiple nested loops at once. Can also be used for `continue`.
+```
+label: {
+  // ...
+  break label; // works
+  // ...
+}
 ```

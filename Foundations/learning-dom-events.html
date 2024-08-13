@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- --------- FIRST EXAMPLE: UNNAMED FUNCTION ---------- -->
+        <h1>First example: Named function</h1>
+        <!-- (1) Specify function attributes directly on HTML elements. -->
+        <button onclick="alert('Hello World')">Click Me 1</button>
+
+        <!-- (2) In JS: Set properties in form of `on<eventType>` on DOM nodes -->
+        <button id="btn">Click Me 2</button>
+
+        <!-- (3) In JS: Attach event listeners to DOM nodes. -->
+        <button id="btn1">Click Me Too</button>
+    </div>
+
+    <p></p>
+
+    <div>
+        <!-- --------- SECOND EXAMPLE: NAMED FUNCTION --------- -->
+        <h1>Second example: Named function</h1>
+        <!-- Method 1 -->
+        <button onclick="alertFunction()">CLICK ME</button>
+
+        <!-- Method 2 -->
+        <button id="btnNamed1">CLICK ME 2</button>
+
+        <!-- Method 3 -->
+        <button id="btnNamed2">CLICK ME 2</button>
+    </div>
+    <p></p>
+
+    <div class="third-example">
+        <!-- --------- THIRD EXAMPLE: Use querySelectorAll (NodeList) --------- -->
+         <h1>Third example: Use querySelectorAll (NodeList)</h1>
+         <div id="container">
+            <button id="1">Click me 1</button>
+            <button id="2">Click me 2</button>
+            <button id="3">Click me 3</button>
+         </div>
+
+    </div>
+
+    <script src = "dom-events.js"></script>
+</body>
+</html>

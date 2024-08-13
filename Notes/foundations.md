@@ -5,21 +5,35 @@ Here are my notes for the Foundations course.
 ---
 ## Contents
 
-1. [CSS Foundations](#css)
-2. [Flexbox](#flexbox)
-3. [JavaScript](#javascript)
+### CSS Foundations
+1. [Inspecting HTML and CSS](#css-htmlcss)
+2. [The Box Model](#css-box)
+3. [Block and Inline](#css-blockinline)
+
+### Flexbox
+1. [Flexbox](#flexbox)
+
+### JavaScript
+1. [Variables and Operators](#js-varop)
+2. [Data Types and Conditionals](#js-typecondi)
+3. [Function Basics](#js-func)
+4. [Clean code](#js-clean)
+5. [Arrays and loops](#js-arrayloop)
+6. [DOM manipulation and events](#js-dom)
+
 
 ---
 
-<a id= "cssinspect"></a>
 ### CSS Foundations
 
+<a id= "css-htmlcss"></a>
 #### Inspecting HTML and CSS
 - Right-click > Inspect
 - HTML: Initial content, DOM: Current content (After rendering JS.)
 - Right-click on any element for other options.
 - To add HTML: Right-click on element. > Edit as HTML.
 
+<a id= "css-box"></a>
 #### The Box Model
 - Every element on a web page is held in a box.
 - Width and height refers to content.
@@ -31,12 +45,15 @@ Here are my notes for the Foundations course.
 - To space out element from itself: Use padding.
 - `boxing-sizing: border-box;`: Default is `content-box`. Usually added to `* {}`.Height and width will include border and padding. The content box will be smaller.
 
+<a id= "css-blockinline"></a>
 #### Block and Inline
 - `display: inline-block`: Inline elements with block-style padding and margin.
 - Generic tags: `<div>` for block and `<span>` for inline.
 - `inline`: Doesn't respect width and height, padding top and bottom exist but overlap with other boxes
 - `inline-block`: Width, height and padding are respected. Elements are side-by-side.
 - `block`: Everything is respected but elements are on new lines.
+
+---
 
 <a id= "flexbox"></a>
 ### Flexbox
@@ -52,15 +69,17 @@ Here are my notes for the Foundations course.
 - `flex-direction`: Default = row.
 - Very useful website: [(here)](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
 
-<a id= "javascript"></a>
-### JavaScript
+---
 
+### JavaScript
+<a id= "js-varop"></a>
 #### Variables and Operators
 - Variable names can only contain letters, digits or symbols $ and _. First digit cannot start with a digit.
 - Variables: `let`, constants: `const`
 - Constants: Hard-coded values use names that are capitalized.
 - Backticks are like f-strings: E.g. `alert (INSERT_BACKTICK Hello, ${name}! INSERT_BACKTICK)`
 
+<a id= "js-typecondi"></a>
 #### Data Types and Conditionals
 - Values of different types are converted to numbers with `==` but not with `!==` (Strict equality check).
 - `null` and `undefined` are `==` to each other but not with any other values.
@@ -71,6 +90,7 @@ Here are my notes for the Foundations course.
 - `alert( alert(1) && alert(2) );`: Shows 1, then undefined.
 - Ternary operator: `condition ? run this code : run this code instead`
 
+<a id= "js-func"></a>
 #### Function Basics
 - Functions can modify global variables if you do not use `let` inside the function.
 
@@ -133,9 +153,11 @@ let func = function(arg1, arg2, ..., argN) {
 // ---------- Arrow function ----------
 let func = (arg1, arg2, ..., argN) => expression;
 ```
+<a id= "js-clean"></a>
 #### Clean code
 - Functions should start with verbs and variables with nouns/ adjectives.
 
+<a id= "js-arrayloop"></a>
 #### Arrays and loops
 - Arrays use numbered indexes (Element names to be numbers.) vs. objects use named indexes (Element names to be strings.).
 - `[]` is used for accessing both arrays and objects. Hence, cannot use negative bracket indexing. E.g. `[-1]`. Use `at()` method instead.
@@ -168,3 +190,47 @@ const leapYears = function (year) {
   }
 };
 ```
+<a id= "js-dom"></a>
+#### DOM manipulation and events
+
+##### DOM Structure
+- Tree-like rep. of contents/ nodes of webpage, based on arrangeement in HTML file. |
+- DOM tree > Nodes: root, parent, child (Directly inside parent.), descendant, sibling.
+
+##### JavaScript in DOM
+- JS does not alter HTML but the DOM.
+- JS code in HTML: JS code is being run before nodes are created in DOM. - - - To include JS for DOM manipulation:
+
+| Position | Notes |
+|----------|-------|
+| Bottom of HTML | After DOM nodes are parsed and created. |
+| Include in `<head>` tag | `<head><script src="js-file.js" defer></script></head>` |
+
+
+##### DOM Manipulation
+- Manipulation with element nodes, via events: Makes manipulation happen dynamically or on demand.
+
+- 3 ways to do:
+
+| Method | Notes |
+|--------|-------|
+| (1) Specify function attributes directly on HTML elements. | (-) Clutter HTML with JS. (-) Can only set one `oneclick` property per DOM element.|
+| (2) In JS: Set properties in form of `on<eventType>` on DOM nodes; E.g `onclick`, `onmousedown`. | (+) Move JS out of HTML and into a separate JS file. (-) BUT DOM element can only have one `onclick`.|
+| (3) In JS: Attach event listeners to DOM nodes. |(+) Separate JS from HTML  (+) Allow multiple event listeners. |
+- Recall:
+```
+// ---------- Arrow functions instead of function expressions ---------
+let func = (arg1, arg2, ..., argN) => expression;
+
+let func = function(arg1, arg2, ..., argN) {
+  return expression;
+};
+```
+
+| Action | Code | Notes|
+|--------|------|------|
+| To attach similar event listeners to many elements | `querySelectorAll('selector')` | Get NodeList of all items matching selector. Acts like an array but is NOT. |
+| To convert NodeList to array | `Array.from()` or spread oeprator (`...`) | |
+| To grab element references |`document.querySelector()`, `document.querySelectorAll()`, `document.getElementById()`, `document.getElementsByTagName()` | Declare var as constant because want to store result and not accidentally reassign it. |
+
+- Refer to dom-example.html.

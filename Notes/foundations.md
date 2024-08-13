@@ -215,8 +215,41 @@ const leapYears = function (year) {
 | Method | Notes |
 |--------|-------|
 | (1) Specify function attributes directly on HTML elements. | (-) Clutter HTML with JS. (-) Can only set one `oneclick` property per DOM element.|
-| (2) In JS: Set properties in form of `on<eventType>` on DOM nodes; E.g `onclick`, `onmousedown`. | (+) Move JS out of HTML and into a separate JS file. (-) BUT DOM element can only have one `onclick`.|
-| (3) In JS: Attach event listeners to DOM nodes. |(+) Separate JS from HTML  (+) Allow multiple event listeners. |
+| (2) In JS: Set properties in form of `on<eventType>` on DOM nodes; e.g `onclick`, `onmousedown`. | (+) Move JS out of HTML and into a separate JS file. (-) BUT DOM element can only have one `onclick`.|
+| (3) In JS: Attach event listeners/ event handlers to DOM nodes; e.g. `addEventListener()` |(+) Separate JS from HTML  (+) Allow multiple event listeners. |
+- Example of implementing event listeners:
+```
+# ---------- In HTML file ---------
+<button id="btn">Click me!</button>
+
+# ---------- In JS ---------
+# (1) Select button id.
+# (2) Define function as event handler.
+# (3) Register an event handler using addEventListener.
+
+let btn = document.querySelector("#btn");
+
+function handleClick() {
+  alert('It was clicked!');
+}
+
+btn.addEventListener('click', handleClick);
+
+# ---------- In JS: Shorter code ---------
+let btn = document.querySelector('#btn');
+
+btn.addEventListener('click', function() {
+  alert('It was clicked!');
+});
+
+# ---------- In JS: Arrow function ---------
+let btn = document.querySelector('#btn');
+
+btn.addEventListener('click', () => {
+  alert('It was clicked!');
+});
+
+```
 - Recall:
 ```
 // ---------- Arrow functions instead of function expressions ---------
@@ -234,3 +267,11 @@ let func = function(arg1, arg2, ..., argN) {
 | To grab element references |`document.querySelector()`, `document.querySelectorAll()`, `document.getElementById()`, `document.getElementsByTagName()` | Declare var as constant because want to store result and not accidentally reassign it. |
 
 - Refer to dom-example.html.
+
+- Event: Action that occurred in web browser.
+- Event flow: Order in which events are received on page from element where event occurs and propagated thru DOM tree.
+- 2 main models: (1) Event bubbling (To `document`/ `window`.) (2) Event capturing
+- DOM Level 2 Event flow: Event flow = Event bubbling, event occurring at exact element (target phase), then event capturing.
+- When event occurs, web browser passes an Event object to event handler. This object is only accessible inside event handler. Once all event handlers have been executed, the event object is automatically destroyed.
+- `addEventListener()`: TO register an event that connects an event to an event listener.
+- Event handler: Function that is called when an event occurs.

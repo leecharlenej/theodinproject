@@ -12,11 +12,12 @@ This repository is for me to hold all my projects from [The Odin Project](https:
 <a id="foundi"></a>
 ### Foundations Course
 
-| Topic | Title | Repository | Notes |
-|-------|-------|------------| ------|
-| CSS   | Odin Recipes | [(here)](https://github.com/leecharlenej/odin-recipes) | In-depth review of HTML structure and CSS classes.
-|CSS    | CSS Exercises | [(here)](https://github.com/leecharlenej/css-exercises) | Practices on Margin and Padding and Flex.
-|CSS    | Odin Landing Page | [(here)](https://github.com/leecharlenej/odin-landing-page) | Web page development using CSS, margins and paddings and flex.
+| Topic | Title | Repository | Live Preview|  Notes |
+|-------|-------|------------|-------------|--------|
+| CSS   | Odin Recipes | [(here)](https://github.com/leecharlenej/odin-recipes) | [(live)](https://leecharlenej.github.io/odin-recipes/) | In-depth review of HTML structure and CSS classes.
+|CSS    | CSS Exercises | [(here)](https://github.com/leecharlenej/css-exercises) |  | Practices on Margin and Padding and Flex.
+|CSS    | Odin Landing Page | [(here)](https://github.com/leecharlenej/odin-landing-page) | [(live)](https://leecharlenej.github.io/odin-landing-page/first_attempt/) |Web page development using CSS, margins and paddings and flex.
 |JavaScript | Odin Rock, paper, scissors | [(here)](https://github.com/leecharlenej/odin-rock-paper-scissors) | JavaScript programme for rock, paper, scissors |
-|JavaScript | JS Exercises | [(here)](https://github.com/leecharlenej/javascript-exercises) | Practices on JavaScript.
-|DOM    | Shopping List | [(here)](Foundations/shopping-list.html) | Shopping list created using DOM manipulation. |
+|JavaScript | JS Exercises | [(here)](https://github.com/leecharlenej/javascript-exercises) | | Practices on JavaScript.
+|DOM    | Shopping List | [(here)](Foundations/shopping-list.html) | [(live)](https://leecharlenej.github.io/odin-landing-page/odin-shopping-list/) | Shopping list created using DOM manipulation. |
+|DOM    | Etch-a-Sketch | [(here)](https://github.com/leecharlenej/odin-etch-a-sketch) | [(live)](https://leecharlenej.github.io/odin-etch-a-sketch/) | Etch-a-Sketch using DOM manipulation. |

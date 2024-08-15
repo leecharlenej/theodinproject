@@ -17,15 +17,26 @@ function sumOfTripledEvens(array) {
     return sum;
   }
 
-  x = sumOfTripledEvens(arrOne);
-  console.log(x);
+x = sumOfTripledEvens(arrOne);
+console.log(x);
 
-  function multiplyByThree(num) {
-    if (num%2===0){
-        return num*3
-    }
-  }
+// Use filter, map, reduce.
 
-  y = arrOne.map(multiplyByThree);
-  console.log(y);
+function isEven (num) {
+  if(num%2===0) {
+      return true;
+  };
+}
+
+function multiplyByThree (num) {
+    return num*3;
+}
+
+
+function combinedFunctionsForTriple (arr) {
+    return ((arr.filter(isEven)).map(multiplyByThree)).reduce((total,currentItem) => {return total+currentItem;},0);
+}
+
+y = combinedFunctionsForTriple(arrOne)
+console.log(y);
 

@@ -21,4 +21,4 @@ This repository is for me to hold all my projects from [The Odin Project](https:
 |JavaScript | JS Exercises | [(here)](https://github.com/leecharlenej/javascript-exercises) <br> [(here)](https://github.com/leecharlenej/JavaScript30)| | Practices on JavaScript.
 |DOM    | Shopping List | [(here)](Foundations/shopping-list.html) | [(live)](https://leecharlenej.github.io/theodinproject/odin-shopping-list/) | Shopping list created using DOM manipulation. |
 |DOM    | Etch-a-Sketch | [(here)](https://github.com/leecharlenej/odin-etch-a-sketch) | [(live)](https://leecharlenej.github.io/odin-etch-a-sketch/) | Etch-a-Sketch using DOM manipulation. |
-|JavaScript | Calculator | [(here)](https://github.com/leecharlenej/odin-calculator) | [(live)]() | Calculator using JavaScript, HTML and CSS. |
+|JavaScript | Calculator | [(here)](https://github.com/leecharlenej/odin-calculator) | [(live)](https://leecharlenej.github.io/odin-calculator/) | Calculator using JavaScript, HTML and CSS. |

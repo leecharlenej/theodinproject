@@ -11,6 +11,7 @@ Here are my notes for the Foundations course: Section - JavaScript Basics.
 3. [Function Basics](#js-func)
 4. [Clean Code](#js-clean)
 5. [Arrays and Loops](#js-arrayloop)
+6. [Miscellaneous Notes]($js-misc)
 
 ---
 
@@ -151,3 +152,12 @@ const leapYears = function (year) {
   }
 };
 ```
+
+<a id= "js-misc"></a>
+#### Miscellenous Notes
+
+| Topic | Explanation |
+|-------|-------------|
+| To display an array, cannot use backticks. | Backticks will convert the array (i.e. `${fifteen}`) into a string and will display the string `"[object Object]"` instead of the array. |
+| To create an array with members from another array | Use spread operator to unpack array.slice(start,end). |
+| Arrow function | Can have<ul><li>Expression body: Single expression becomes implict return value.</li><li>Block body: Must use an explicit return statement.</li></ul> |

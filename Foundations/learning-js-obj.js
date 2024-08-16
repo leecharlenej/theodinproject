@@ -34,7 +34,12 @@ function multiplyByThree (num) {
 
 
 function combinedFunctionsForTriple (arr) {
-    return ((arr.filter(isEven)).map(multiplyByThree)).reduce((total,currentItem) => {return total+currentItem;},0);
+    //return ((arr.filter(isEven)).map(multiplyByThree)).reduce((total,currentItem) => {return total+currentItem;},0);
+    return arr
+    .filter(isEven)
+    .map(multiplyByThree)
+    .reduce((acc,curr) => acc+curr);
+  
 }
 
 y = combinedFunctionsForTriple(arrOne)

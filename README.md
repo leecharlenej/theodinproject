@@ -6,6 +6,7 @@ This repository is for me to hold all my projects from [The Odin Project](https:
 
 ### Contents
 1. [Foundations Course](#foundi)
+2. [Full Stack JavaScript Path](#fsjs)
 
 ---
 
@@ -22,3 +23,10 @@ This repository is for me to hold all my projects from [The Odin Project](https:
 |DOM    | Shopping List | [(here)](Foundations/shopping-list.html) | [(live)](https://leecharlenej.github.io/theodinproject/odin-shopping-list/) | Shopping list created using DOM manipulation. |
 |DOM    | Etch-a-Sketch | [(here)](https://github.com/leecharlenej/odin-etch-a-sketch) | [(live)](https://leecharlenej.github.io/odin-etch-a-sketch/) | Etch-a-Sketch using DOM manipulation. |
 |JavaScript | Calculator | [(here)](https://github.com/leecharlenej/odin-calculator) | [(live)](https://leecharlenej.github.io/odin-calculator/) | Calculator using JavaScript, HTML and CSS. |
+---
+
+<a id="fsjs"></a>
+### Full Stack JavaScript Path
+
+| Topic | Title | Repository | Live Preview|  Notes |
+|-------|-------|------------|-------------|--------|

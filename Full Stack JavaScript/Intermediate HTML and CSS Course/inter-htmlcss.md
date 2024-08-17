@@ -10,7 +10,13 @@ Here are my notes for the Full Stack JavaScript Path: Course - Intermediate HTML
 2. [Tables](#html-tables)
 
 ### Intermediate CSS Concepts
-1. [Default Styles](#css-default)
+1. [Styles](#css-styles)
+
+### Forms
+1. [Form Basics](#form-basics)
+
+### Grids
+1. [Introduction](#grids-intro)
 
 ---
 
@@ -42,10 +48,34 @@ Here are my notes for the Full Stack JavaScript Path: Course - Intermediate HTML
 
 ---
 
-### Intermediate CSSConcepts
+### Intermediate CSS Concepts
 
-<a id= "css-default"></a>
-#### Default Styles
+<a id= "css-styles"></a>
+#### Styles
 
+| Topic | Notes |
+|-------|-------|
+| box-sizing |<ul><li>`content-box` (default value): Width and height only refer to content of element and not padding, border or margin.</li><li>`border-box`: Includes padding and border. Content area will shrink to accomodate.</li></ul> |
+| Relative units | <ul><li>`em`: Font size of element or parent's element.</li><li>`rem`: Font size of the root element.</li></ul> |
+| Viewport units | <ul><li>`1vh`: 1% of viewport height.</li><li>`1vw`: 1% of viewport width.</li></ul>|
+
+---
+
+### Forms
+
+<a id= "forms-basics"></a>
+#### Form basics
+
+| Topic | Notes |
+|-------|-------|
+| `<label for="first_name">` | Labels are for users to understand what the data entered into an input field will represent. |
+| `<input type="text" id="first_name" placeholder="Bob..." name="first_name"` | Name attribute is for backend to know what each piece of data represents.
+
+---
+
+### Grids
+
+<a id= "grid-intro"></a>
+#### Introduction
 | Topic | Notes |
 |-------|-------|

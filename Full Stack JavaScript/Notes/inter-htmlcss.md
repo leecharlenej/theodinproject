@@ -58,6 +58,8 @@ Here are my notes for the Full Stack JavaScript Path: Course - Intermediate HTML
 | box-sizing |<ul><li>`content-box` (default value): Width and height only refer to content of element and not padding, border or margin.</li><li>`border-box`: Includes padding and border. Content area will shrink to accomodate.</li></ul> |
 | Relative units | <ul><li>`em`: Font size of element or parent's element.</li><li>`rem`: Font size of the root element.</li></ul> |
 | Viewport units | <ul><li>`1vh`: 1% of viewport height.</li><li>`1vw`: 1% of viewport width.</li></ul>|
+| Frameworks | Bootstrap, Tailwind, Bulma, Foundation etc.|
+| Preprocessors/ precompilers | Langauges that help write CSS more easily.E.g. CSS nesting, SASS, LESS< Stylus.|
 
 ---
 

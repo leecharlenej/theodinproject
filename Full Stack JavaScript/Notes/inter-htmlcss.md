@@ -81,3 +81,5 @@ Here are my notes for the Full Stack JavaScript Path: Course - Intermediate HTML
 #### Introduction
 | Topic | Notes |
 |-------|-------|
+| To create grids | Define grid tracks first. |
+| Gaps | Only appear between grid tracks; do not add sapce to the top and bottom, left or right of container. Gaps act as if line has gained extra width.|

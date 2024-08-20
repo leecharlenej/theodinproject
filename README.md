@@ -30,3 +30,4 @@ This repository is for me to hold all my projects from [The Odin Project](https:
 
 | Topic | Title | Repository | Live Preview|  Notes |
 |-------|-------|------------|-------------|--------|
+| HTML & CSS | Odin Sign-up Form | [(here)](https://github.com/leecharlenej/odin-sign-up-form) | [(live)](https://leecharlenej.github.io/odin-sign-up-form/) | Sign-up form exploring more advanced CSS options and form creation.

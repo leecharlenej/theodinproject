@@ -83,3 +83,4 @@ Here are my notes for the Full Stack JavaScript Path: Course - Intermediate HTML
 |-------|-------|
 | To create grids | Define grid tracks first. |
 | Gaps | Only appear between grid tracks; do not add sapce to the top and bottom, left or right of container. Gaps act as if line has gained extra width.|
+| Grid vs. Flex| <ul><li>Content First Design: Behaviour of item changes; grow, shrink and moves in relation to other items make the layout dynamic. Flexbox</li><li>Layout First Design: Grid</li><li>Flexbox is essentially for laying out items in a single dimension – in a row OR a column. Grid is for layout of items in two dimensions – rows AND columns.</li><li>Wrapper: use Flexbox (Can set max-width of grid and pplace it in the middle of the viewport.) and inner: use grid.</li><li>[(link)](https://www.youtube.com/watch?v=3elGSZSWTbM) Flexbox if you want the intrinsic sizing and grid if you want a more structrued layout.</li></ul> |

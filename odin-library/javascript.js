@@ -8,7 +8,16 @@ function Book(title, author, pages, read) {
     };
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(myLibraryArr) {
+    let bookFields = ['title', 'author', 'pages', 'read'];
+    let newBook = new Book();
+
+    for (i in bookFields) {
+        console.log(i);
+        newBook[bookFields[i]] = prompt(`${bookFields[i]}`);
+    };
+
+    myLibraryArr.push(newBook);
     
 }
 

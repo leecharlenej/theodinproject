@@ -1,4 +1,7 @@
-function Book(title, author, pages, status) {
+let index = 2;
+
+function Book(index, title, author, pages, status) {
+    this.index = index;
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -21,9 +24,9 @@ function addBookToLibrary(myLibraryArr) {
     
 }
 
-const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, false);
-const harryPotter = new Book('Harry Potter and the Philosopher\'s Stone', 'J.K. Rowling', 320, true);
-const janeEyre = new Book('Jane Eyre', 'Charlotte Brontë', 290, false);
+const theHobbit = new Book(0, 'The Hobbit', 'J.R.R. Tolkien', 295, true);
+const harryPotter = new Book(1, 'Harry Potter and the Philosopher\'s Stone', 'J.K. Rowling', 320, true);
+const janeEyre = new Book(2, 'Jane Eyre', 'Charlotte Brontë', 290, false);
 
 console.log(theHobbit.info());
 console.log(harryPotter.info());
@@ -47,24 +50,45 @@ myLibrary.forEach(function(book) {
         <div class="title">${book.title}</div>
         <div class="author">by ${book.author}</div>
         <div class="pages">${book.pages} pages</div>
-        <div class="status">[${book.read ? 'read' : 'not read'}]</div>
+        <div class="status" data-index="${book.index}">[${book.status ? 'read' : 'not read'}]</div>
     </div>
     <hr>
     <div class="book-footer">
          <div class="icons">
-            <button id="deleteButton"><img src="assets/img/book-remove.svg">
+            <button class="deleteButton"><img src="assets/img/book-remove.svg">
             <span class="icon-caption">Delete</span></button>
         </div>
 
         <div class="icons">
-            <button id="readButton"><img src="assets/img/book-edit.svg">
+            <button class="readButton" data-index="${book.index}"><img src="assets/img/book-edit.svg">
             <span class="icon-caption">Read</span></button>
         </div>
     </div>
 </div>`
-})
+});
 
 document.getElementById("allBooks").innerHTML = allBooksHTML;
+
+let currentReadButtonsList= document.querySelectorAll(".readButton");
+
+for (let i=0; i<currentReadButtonsList.length; i++){
+    currentReadButtonsList[i].addEventListener("click", function() {
+        const bookIndex_str= this.getAttribute('data-index');
+        const bookIndex_num = Number(bookIndex_str);
+        changeReadStatus(bookIndex_num);
+    });
+}
+
+
+function changeReadStatus (bookIndex) {
+    const book = myLibrary.find(book => book.index === bookIndex);
+    console.log(book);
+    book.status = !book.status;
+
+    // Update the DOM to reflect the change
+    const statusElement = document.querySelector(`.status[data-index='${bookIndex}']`);
+    statusElement.textContent = `[${book.status ? 'read' : 'not read'}]`;
+}
 
 /* ================================
    Add book modal
@@ -96,13 +120,16 @@ formDialog.addEventListener("close", (e) => {
 
 addButton.addEventListener("click", (event) => {
     event.preventDefault();
+    index++;
+    console.log(`New index: ${index}`);
 
     const title = formDialog.querySelector("input[name='title']").value;
     const author = formDialog.querySelector("input[name='author']").value;
     const pages = formDialog.querySelector("input[name='pages']").value
     const status = formDialog.querySelector("input[name='status']:checked").value;
 
-    const newBook = new Book (title, author, pages, status);
+    const newBook = new Book (index, title, author, pages, status);
+    myLibrary.push(newBook);
 
     let newBookHTML = '';
     newBookHTML += `
@@ -112,36 +139,38 @@ addButton.addEventListener("click", (event) => {
         <div class="title">${newBook.title}</div>
         <div class="author">by ${newBook.author}</div>
         <div class="pages">${newBook.pages} pages</div>
-        <div class="status">[${newBook.read ? 'read' : 'not read'}]</div>
+        <div class="status" data-index="${newBook.index}">[${newBook.status ? 'read' : 'not read'}]</div>
     </div>
     <hr>
     <div class="book-footer">
          <div class="icons">
-            <button id="deleteButton"><img src="assets/img/book-remove.svg">
+            <button class="deleteButton"><img src="assets/img/book-remove.svg">
             <span class="icon-caption">Delete</span></button>
         </div>
 
         <div class="icons">
-            <button id="readButton"><img src="assets/img/book-edit.svg">
+            <button class="readButton" data-index="${newBook.index}"><img src="assets/img/book-edit.svg">
             <span class="icon-caption">Read</span></button>
         </div>
     </div>
 </div>`
 
     document.getElementById("allBooks").innerHTML += newBookHTML;
+
+    const newReadButton = document.querySelector(`.readButton[data-index='${newBook.index}']`);
+    console.log(newReadButton);
+    newReadButton.addEventListener("click", function() {
+        changeReadStatus(newBook.index);
+    });
+
+
     formDialog.close(`${newBook.title}`);
 });
 
-let readButton = document.querySelector("#readButton");
-readButton.addEventListener("click", changeReadStatus);
 
 /* ================================
    Book icons
    ================================ */
 
-function changeReadStatus (event) {
-    let newReadStatus = document.querySelector(".book-header > .status");
-    console.log("check:", newReadStatus);
-}
 
 

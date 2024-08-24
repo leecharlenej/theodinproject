@@ -55,7 +55,7 @@ myLibrary.forEach(function(book) {
     <hr>
     <div class="book-footer">
          <div class="icons">
-            <button class="deleteButton"><img src="assets/img/book-remove.svg">
+            <button class="deleteButton" data-index="${book.index}"><img src="assets/img/book-remove.svg">
             <span class="icon-caption">Delete</span></button>
         </div>
 
@@ -69,6 +69,10 @@ myLibrary.forEach(function(book) {
 
 document.getElementById("allBooks").innerHTML = allBooksHTML;
 
+/* ================================
+   First 3 books: Change status and delete
+   ================================ */
+
 let currentReadButtonsList= document.querySelectorAll(".readButton");
 
 for (let i=0; i<currentReadButtonsList.length; i++){
@@ -79,7 +83,6 @@ for (let i=0; i<currentReadButtonsList.length; i++){
     });
 }
 
-
 function changeReadStatus (bookIndex) {
     const book = myLibrary.find(book => book.index === bookIndex);
     console.log(book);
@@ -88,6 +91,28 @@ function changeReadStatus (bookIndex) {
     // Update the DOM to reflect the change
     const statusElement = document.querySelector(`.status[data-index='${bookIndex}']`);
     statusElement.textContent = `[${book.status ? 'read' : 'not read'}]`;
+}
+
+let currentDeleteButtonsList= document.querySelectorAll(".deleteButton");
+
+for (let i=0; i<currentDeleteButtonsList.length; i++){
+    currentDeleteButtonsList[i].addEventListener("click", function() {
+        const bookIndex_str= this.getAttribute('data-index');
+        const bookIndex_num = Number(bookIndex_str);
+        console.log(bookIndex_num);
+        deleteBook(bookIndex_num);
+    });
+}
+
+function deleteBook(bookIndex){
+    const bookIndexInArray = myLibrary.findIndex(book => book.index === bookIndex);
+    myLibrary.splice(bookIndexInArray, 1);
+    console.log(`Book with index ${bookIndex} removed from myLibrary.`);
+
+    const bookElement = document.querySelector(`.book .status[data-index='${bookIndex}']`).closest('.book');
+    if (bookElement) {
+        bookElement.remove();
+    }
 }
 
 /* ================================
@@ -144,7 +169,7 @@ addButton.addEventListener("click", (event) => {
     <hr>
     <div class="book-footer">
          <div class="icons">
-            <button class="deleteButton"><img src="assets/img/book-remove.svg">
+            <button class="deleteButton" data-index="${newBook.index}"><img src="assets/img/book-remove.svg">
             <span class="icon-caption">Delete</span></button>
         </div>
 
@@ -162,6 +187,14 @@ addButton.addEventListener("click", (event) => {
     newReadButton.addEventListener("click", function() {
         changeReadStatus(newBook.index);
     });
+
+    const newDeleteButton = document.querySelector(`.deleteButton[data-index='${newBook.index}']`);
+    console.log(newDeleteButton);
+    newDeleteButton.addEventListener("click", function() {
+        deleteBook(newBook.index);
+    });
+
+
 
 
     formDialog.close(`${newBook.title}`);

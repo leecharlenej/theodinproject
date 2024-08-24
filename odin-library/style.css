@@ -7,9 +7,13 @@ body {
     margin: 50px auto;
 }
 
-.icons {
+.icons img {
     width: 30px;
     height: 30px;
+}
+
+.icons button {
+    border: none;
 }
 
 /* ==========================================================================
@@ -91,9 +95,9 @@ body {
 .book-footer {
     margin: 10px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2,50px);
     justify-content: center;
-    gap: 50px;
+    gap: 5px;
 }
 
 .icon-caption {

@@ -2,7 +2,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 .container {
-    border: 1px solid black;
     width: 900px;
     margin: 50px auto;
 }
@@ -21,11 +20,16 @@ body {
    ========================================================================== */
 
 .header,
-.library {
+.library-body {
     border: 1px solid black;
 }
 
+.library-body {
+    border-top: none;
+}
+
 .header {
+    width: 100%;
     display: grid;
     grid-template-columns: 65% auto;
     justify-content: center;

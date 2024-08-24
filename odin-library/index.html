@@ -8,19 +8,72 @@
 </head>
 <body>
 
+    <dialog id="formDialog">
+        <h3>Add a new book</h3>
+        <form method="dialog" id="formDialogBody">
+            <div class="form-body">
+
+                <div class="form-left">
+                    <label for="title">Title:</label>
+                    <label for="author">Author:</label>
+                    <label for="pages">No. of pages:</label>
+                    <label for="status">Finished reading:</label>
+                </div>
+
+                <div class="form-right">
+                    <input type="text" id="title" name="title" required />
+                    <input type="text" id="author" name="author" required />
+                    <input type="number" id="pages" name="pages" required />
+
+                    <div class="radio-container">
+                        <div>
+                            <input type="radio" id="read" name="status" value="read">
+                            <label for="statusRead">Read</label>
+                        </div>
+                          
+                        <div>
+                            <input type="radio" id="notread" name="status" value="notread" checked>
+                            <label for="statusNotRead">Not read</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-footer">
+                <div>
+                    <button id="addButton" type="button" value="default">Add</button>
+                    <button value="cancel" formnovalidate>Cancel</button>
+                </div>
+            </div>
+
+        </form>
+
+    </dialog>
+
     <div class="container">
 
-        <div class="left">
-            <h2>Add new book</h2>
+        <div class="header">
+            <div class="greetings">
+                <span>Welcome back,</span>
+                <br>
+                <span id="username">Charlene</span>
+            </div>
+            <div class="nav-addBook">
+                <button id="addBookButton">Add new book!</button>
+            </div>
         </div>
 
-        <div class="right">
-            <h2>Char's GoodReads</h2>
-            <div class="library">Library</div>
+        <div class="library-body">
+            
+            <div class="library-header">
+                <h3>Your Library</h3>
+                <div class="action-outcome"></div>
+            </div>
 
-        
+            <div id="allBooks">All books</div>
+            
         </div>
-
 
     </div>
 

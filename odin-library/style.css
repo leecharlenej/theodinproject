@@ -1,13 +1,127 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
 .container {
+    border: 1px solid black;
+    width: 900px;
+    margin: 50px auto;
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.header,
+.library {
+    border: 1px solid black;
+}
+
+.header {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    
-}
-.left {
-    border:1px solid black;
+    grid-template-columns: 65% auto;
+    justify-content: center;
+    align-items: center;
 }
 
-.right {
-    border:1px solid black;
+.header #username {
+    font-size: x-large;
+    font-weight: 600;
+}
 
+/* ==========================================================================
+   Library
+   ========================================================================== */
+
+.library-body {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 60px auto;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.library-body > .library-header{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 70% auto;
+}
+
+.library-body > .library-header > .action-outcome {
+    align-self: center;
+}
+
+.library-body > #allBooks {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 50px;
+}
+
+.book {
+    border: 1px solid black;
+    border-left: 20px solid #7b6c5e;
+    border-radius: 5px;
+    background-color: #f4f2e9;
+    height: 270px;
+}
+
+.book-header {
+    margin: 10px;
+    align-items: center;
+    height: 170px;
+}
+
+.book-header > .title {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.book-header > .author {
+    font-weight: bold;
+}
+
+.book-header > .pages {
+    font-style: italic;
+}
+
+.book-footer {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 50px;
+}
+
+.icon-caption {
+    font-size: small;
+}
+
+/* ==========================================================================
+   Form
+   ========================================================================== */
+.form-body {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 120px auto;
+}
+
+.form-body > .form-left {
+    display: grid;
+    grid-template-rows: repeat(4,30px);
+    row-gap: 15px;
+}
+
+.form-body > .form-right {
+    display: grid;
+    grid-template-rows: repeat(4,30px);
+    row-gap: 15px;
+}
+
+.radio-container > div {
+    display: inline-block;
+    margin-right: 10px;
 }

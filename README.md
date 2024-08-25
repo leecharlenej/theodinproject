@@ -32,4 +32,4 @@ This repository is for me to hold all my projects from [The Odin Project](https:
 |-------|-------|------------|-------------|--------|
 | HTML & CSS | Odin Sign-up Form | [(here)](https://github.com/leecharlenej/odin-sign-up-form) | [(live)](https://leecharlenej.github.io/odin-sign-up-form/) | Sign-up form exploring more advanced CSS options and form creation. |
 | HTML & CSS | Odin Admin Dashboard | [(here)](https://github.com/leecharlenej/odin-admin-dashboard) | [(live)](https://leecharlenej.github.io/odin-admin-dashboard/) | Admin dashboard using grids. |
-| JavaScript | Odin Library | [(here)](https://github.com/leecharlenej/theodinproject/tree/main/odin-library) | [(live)](https://leecharlenej.github.io/theodinproject/odin-library/) | |
+| JavaScript | Odin Library | [(here)](https://github.com/leecharlenej/theodinproject/tree/main/odin-library) | [(live)](https://leecharlenej.github.io/theodinproject/odin-library/) | Record of books read using JS objects. |

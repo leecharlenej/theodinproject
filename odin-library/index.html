@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Char's Odin Library</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="dist/purify.min.js"></script>
 </head>
 <body>
 
@@ -21,8 +22,8 @@
                 </div>
 
                 <div class="form-right">
-                    <input type="text" id="title" name="title" required />
-                    <input type="text" id="author" name="author" required />
+                    <input type="text" id="title" name="title" pattern="^[a-zA-Z0-9']+$" title="Only letters, numbers, and apostrophes are allowed." required />
+                    <input type="text" id="author" name="author" pattern="^[a-zA-Z0-9']+$" title="Only letters, numbers, and apostrophes are allowed." required />
                     <input type="number" id="pages" name="pages" required min="1"/>
 
                     <div class="radio-container">

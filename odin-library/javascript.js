@@ -148,10 +148,10 @@ addButton.addEventListener("click", (event) => {
     index++;
     console.log(`New index: ${index}`);
 
-    const title = formDialog.querySelector("input[name='title']").value;
-    const author = formDialog.querySelector("input[name='author']").value;
-    const pages = formDialog.querySelector("input[name='pages']").value
-    const status = formDialog.querySelector("input[name='status']:checked").value;
+    const title = DOMPurify.sanitize(formDialog.querySelector("input[name='title']").value);
+    const author = DOMPurify.sanitize(formDialog.querySelector("input[name='author']").value);
+    const pages = DOMPurify.sanitize(formDialog.querySelector("input[name='pages']").value);
+    const status = DOMPurify.sanitize(formDialog.querySelector("input[name='status']:checked").value);
 
     const newBook = new Book (index, title, author, pages, status);
     myLibrary.push(newBook);

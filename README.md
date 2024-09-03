@@ -34,3 +34,4 @@ This repository is for me to hold all my projects from [The Odin Project](https:
 | HTML & CSS | Odin Admin Dashboard | [(here)](https://github.com/leecharlenej/odin-admin-dashboard) | [(live)](https://leecharlenej.github.io/odin-admin-dashboard/) | Admin dashboard using grids. |
 | JavaScript | Odin Library | [(here)](https://github.com/leecharlenej/theodinproject/tree/main/odin-library) | [(live)](https://leecharlenej.github.io/theodinproject/odin-library/) | Record of books read using JS objects. |
 | JavaScript | Odin Tic-Tac-Toe | [(here)](https://github.com/leecharlenej/odin-tic-tac-toe) | [(live)](https://leecharlenej.github.io/odin-tic-tac-toe/) | Tic-tac-toe using factory functions. |
+| JavaScript | Odin Restaurant Page | [(here)](https://github.com/leecharlenej/odin-restaurant-page) | [(live)](https://leecharlenej.github.io/odin-restaurant-page/dist/) | Restaurant page using Webpack and JS modules. |

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+    <input id="gif-name" type="text" placeholder="Search for a gif!">
+    <button id="button-gif">Get a new gif!</button>
+    <p></p>
+  <img src="">
+  <script>
+    const img = document.querySelector('img');
+    const buttonGif = document.querySelector('#button-gif');
+
+    function getNewGif () {
+        const gifName = document.querySelector("#gif-name").value;
+        console.log(`gifName: ${gifName}`);
+        fetchNewGif(gifName);
+    }
+    
+
+    async function fetchNewGif(gifName) {
+      const response = await fetch('https://api.giphy.com/v1/gifs/translate?api_key=2LyHItR9Q61oF69nblcAPwcuDoocstZ8&s='+gifName, {mode: 'cors'})
+      const gifData = await response.json();
+      img.src = gifData.data.images.original.url;
+    }
+
+    window.onload = fetchNewGif('dogs');
+
+    buttonGif.addEventListener("click", getNewGif);
+  </script>
+</body>
+</html>

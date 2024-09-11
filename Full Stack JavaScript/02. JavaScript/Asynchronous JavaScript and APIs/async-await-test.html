@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        async function function1() {
+            // Next 2 lines are the same. async ensures function returns a promise/ wraps non-promises in a promise.
+            // Can do it explicitly or not.
+            //return 1;
+            return Promise.resolve(1);
+        }
+
+        //function1().then(alert);
+
+        async function function2() {
+
+            let promise = new Promise((resolve, reject) => {
+            setTimeout(() => resolve("done!"), 1000)
+            });
+
+            let result = await promise; // wait until the promise resolves (*)
+
+            alert(result); // "done!"
+        }
+
+        function2();
+
+    </script>
+    
+</body>
+</html>
+
+
